@@ -1,10 +1,10 @@
 export default {
-  title: "Example/Header",
+  title: "Example/Dropdown",
   argTypes: {}
 }
 
 const Template = args => {
-  return `<div>Hola soy el Header</div>`
+  return `<div>Hola soy el Dropdown</div>`
 }
 
 export const Simple = Template.bind({})

@@ -43,6 +43,11 @@ button {
   display: flex;
   flex-direction: row-reverse;
   padding: 32px 72px 0;
+  opacity: 0;
+  animation-name: enter;
+  animation-duration: 5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
 }
 
 .header .rrss__list {
@@ -81,20 +86,27 @@ button {
   margin-top: 150px;
   text-align: right;
   list-style: none;
+  opacity: 0;
+  animation-name: enter;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
-.navigation .navigation__list li {
+.navigation .navigation__list .navigation__list-item {
   color: #fff;
   font-weight: bold;
   font-size: 24px;
   font-weight: bold;
+  cursor: pointer;
 }
 
-.navigation .navigation__list li.active {
+.navigation .navigation__list .navigation__list-item.navigation__list--active {
   transform: translateX(32px);
+  transition: transform .5s ease;
 }
 
-.navigation .navigation__list li:not(:last-child) {
+.navigation .navigation__list .navigation__list-item:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -124,9 +136,13 @@ button {
 
 .main_content {
   width: 760px;
-  max-height: 150px;
   margin: 0 auto;
   color: #fff;
+  opacity: 0;
+  animation-name: enter;
+  animation-duration: 5s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
 }
 
 .main_content .content__title {
@@ -139,4 +155,13 @@ button {
   font-size: 24px;
   line-height: 2rem;
   text-align: justify;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

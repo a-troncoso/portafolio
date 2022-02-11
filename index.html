@@ -8,7 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/aboutMe.css" />
+  <link rel="stylesheet" href="./styles/projects.css" />
+  <link rel="stylesheet" href="./styles/navigation.css" />
   <title>Portafolio 1</title>
 </head>
 
@@ -21,11 +24,27 @@
       <aside class="aside">
         <nav class="navigation bordered">
           <ul class="navigation__list">
-            <li class="navigation__list-item navigation__list--active">Sobre mi</li>
-            <li class="navigation__list-item">Proyectos</li>
-            <li class="navigation__list-item">Exp. Laboral</li>
-            <li class="navigation__list-item">Contacto</li>
-            <li class="navigation__list-item">Blog</li>
+            <li class="navigation__list-item navigation__list--active">
+              <a class="navigation__button-link" onclick="onClickLink(this, () => applyMainContent('aboutMe'))">Sobre
+                mi</a>
+            </li>
+            <li class="navigation__list-item">
+              <a class="navigation__button-link"
+                onclick="onClickLink(this, () => applyMainContent('projects'))">Proyectos</a>
+            </li>
+            <li class="navigation__list-item">
+              <a class="navigation__button-link" onclick="onClickLink(this, () => applyMainContent('experience'))">
+                Exp. Laboral
+              </a>
+            </li>
+            <li class="navigation__list-item">
+              <a class="navigation__button-link"
+                onclick="onClickLink(this, () => applyMainContent('contact'))">Contacto</a>
+            </li>
+            </li>
+            <li class="navigation__list-item">
+              <a class="navigation__button-link" onclick="onClickLink(this, () => applyMainContent('blog'))">Blog</a>
+            </li>
           </ul>
         </nav>
       </aside>
@@ -45,24 +64,14 @@
           </ul>
         </header>
         <section class="main__section">
-          <article class="main_content">
-            <h3 class="content__title">Hi all</h3>
-            <p>
-              I'm Álvaro. Javascript and chicken lover. Frontend developer. Programmer. Autodidact in search of knowledge.
-              I like to laugh, share good conversations with a good beer.
-            </p>
-            <p>
-              I’m currently working on an a project to manage home spends via mobile app built in React Native.
-              In tech area currently learning design patterns, application architecture and developing lead
-              skills.
-            </p>
-          </article>
+          <article class="main_content"></article>
         </section>
       </main>
     </div>
   </div>
 
-  <script src="./index.js"></script>
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/navigation.js"></script>
 
 </body>
 

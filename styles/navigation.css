@@ -1,0 +1,57 @@
+.navigation {
+  width: max-content;
+  height: max-content;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.navigation .navigation__list {
+  padding: 0;
+  margin: 0;
+  margin-top: 150px;
+  text-align: right;
+  list-style: none;
+  opacity: 0;
+  animation-name: enter;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.navigation .navigation__list .navigation__list-item .navigation__button-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navigation .navigation__list .navigation__list-item {
+  transition: transform 0.5s ease;
+}
+
+.navigation
+  .navigation__list
+  .navigation__list-item:not(.navigation__list--active):hover {
+  animation: listItemMovementOnHover 0.5s infinite;
+  animation-timing-function: ease-out;
+}
+
+.navigation .navigation__list .navigation__list-item.navigation__list--active {
+  transform: translateX(32px);
+}
+
+.navigation .navigation__list .navigation__list-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@keyframes listItemMovementOnHover {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
